@@ -67,6 +67,8 @@ const func:UserName = (n,m) =>{
 }
 
 
+type ThemeMode="light" | "dark"; // this is a union type
+
 // --------------------------------------------------------
                               // Arrays
 
@@ -153,6 +155,24 @@ func3(1,2,3,4,5);
 // Function with Object
 const func4 = (obj:{name:string,age:number}) => console.log(obj)
 func4({name:"Arfan",age:25})
+
+type GetDataType =(product:{
+  name:string,
+  stock:number,
+  price:number,
+  isAvailable:boolean
+})=> void;
+
+const getData:GetDataType = (product) => {
+  console.log(product);
+}
+
+getData({
+  name:"Arfan",
+  stock:10,
+  price:100,
+  isAvailable:true
+})
 
 // Function with Array
 const func5 = (arr:[string,string]) => console.log(arr)
